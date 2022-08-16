@@ -31,7 +31,6 @@ Resources:
       AliasTarget:
         DNSName: s3-website.us-east-1.amazonaws.com
         HostedZoneId: Z00684801I7GELBGWLUZY
-      TTL: 900
       Type: A
 
 Outputs:
