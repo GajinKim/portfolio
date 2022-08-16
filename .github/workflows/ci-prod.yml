@@ -1,8 +1,8 @@
 name: ci-prod
 
-on: 
+on:
   push:
-    branches: ['master']
+    branches: ["master"]
 
 permissions:
   id-token: write
@@ -28,8 +28,11 @@ jobs:
           role-to-assume: ${{ secrets.ARN_AWS_IAM_ROLE }}
           aws-region: ${{ env.REGION }}
 
-      - name: Deploy to S3 Bucket
+      - name: Deploy ${{ env.STACK_NAME }}
         run: |
-          sam deploy --stack-name $STACK_NAME --region $REGION 
+          sam deploy --stack-name $STACK_NAME --region $REGION
+
+      - name: Deploy S3 Bucket
+        run: |
           BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name $STACK_NAME --query 'Stacks[0].Outputs[?OutputKey==`BucketName`].OutputValue' --output text)
           aws s3 cp src s3://$BUCKET_NAME --recursive
