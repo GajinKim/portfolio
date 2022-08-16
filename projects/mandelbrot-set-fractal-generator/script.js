@@ -262,7 +262,7 @@ function drawIntervalFrame(xOrigin, yOrigin, zoom, maxIterations) {
                 let maxHue = 360;
                 let minHue = 20;
                 let colorHue = parseInt(minHue + Math.round(maxHue * pointBelongs / maxIterations));
-                var color = `hsl(${colorHue}, 100%, 50%`;
+                var color = `hsl(${colorHue}, 70%, 50%`;
                 fillPixel(x, y, color);
             }
             imaginary += imaginaryStep;
