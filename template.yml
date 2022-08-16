@@ -9,6 +9,13 @@ Resources:
     Type: AWS::S3::BucketPolicy
     Properties:
       Bucket: !Ref Bucket
+      PolicyDocument:
+        Statement:
+          - Action:
+            - 's3:GetObject'
+          Effect: Allow
+          Resource:
+            - !Sub "arn:aws:s3:::${Bucket}/*"
 
 Outputs:
   S3BucketName:
