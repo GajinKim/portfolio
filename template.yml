@@ -28,7 +28,8 @@ Resources:
     Properties:
       HostedZoneId: Z00684801I7GELBGWLUZY
       Name: gajinkim.com.
-      ResourceRecords: !Ref Bucket
+      ResourceRecords: 
+        - !Ref Bucket
       TTL: 900
       Type: A
 
