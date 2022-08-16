@@ -32,7 +32,7 @@ jobs:
         run: |
           sam deploy --stack-name $STACK_NAME --region $REGION
 
-      - name: Deploy S3 Bucket
+      - name: Add Files to S3 Bucket
         run: |
           BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name $STACK_NAME --query 'Stacks[0].Outputs[?OutputKey==`BucketName`].OutputValue' --output text)
           aws s3 cp src s3://$BUCKET_NAME --recursive
