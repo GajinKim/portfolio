@@ -1,0 +1,38 @@
+name: ci-prod
+
+on: 
+  push:
+    branches: ['main']
+
+permissions:
+  id-token: write
+  contents: read
+  deployments: write
+
+env:
+  REGION: us-east-1
+
+jobs:
+  deploy-prod:
+    runs-on: ubuntu-latest
+    environment: prod
+    env:
+      STACK_NAME: portfolio
+    steps:
+      - name: Checkout Github Repo
+        uses: actions/checkout@master
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.ARN_AWS_IAM_ROLE }}
+          aws-region: ${{ env.REGION }}
+
+      - name: Deploy to S3 Bucket
+        run: |
+          sam deploy --stack-name $STACK_NAME --region $REGION 
+          S3_BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name $STACK_NAME --query 'Stacks[0].Outputs[?OutputKey==`S3BucketName`].OutputValue' --output text)
+          aws s3 cp index.html
+
+          # EC2_IP_ADDRESS=$(aws cloudformation describe-stacks --region $REGION --query 'Stacks[0].Outputs[?OutputKey==`IPAddress`].OutputValue' --output text)
+          # echo "::set-output name=SERVER_IP::$EC2_IP_ADDRESS"
