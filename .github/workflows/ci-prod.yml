@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: prod
     env:
-      STACK_NAME: portfolio
+      STACK_NAME: portfolio-cloudformation-stack
     steps:
       - name: Checkout Github Repo
         uses: actions/checkout@master

@@ -16,6 +16,7 @@ Resources:
             Effect: Allow
             Resource:
               - !Sub "arn:aws:s3:::${Bucket}/*"
+            Principal: '*'
 
 Outputs:
   S3BucketName:
