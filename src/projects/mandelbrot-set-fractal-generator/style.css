@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./background.jpg');
+    position: relative; 
+    z-index: -2;
+}
+
+label {
+    color: white;
+}
+
+#mandelbrot-canvas {
+    /* center horizontally and vertically */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    /* prevent scroll bars */
+    display: block;
+    z-index: -1;
+}
+
+/* large devices > 576 */
+@media (min-width: 577px) {
+    #modal {
+        width: 576px;
+        justify-content: center;
+    }
+
+    #modal-content {
+        background-color: rgba(0, 32, 105, 0.3);
+        justify-content: center;
+        width: 100%;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+/* small devices -<=576 */
+@media (max-width: 576px) {
+    #modal {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #modal-content {
+        background-color: rgba(0, 32, 105, 0.3);
+        justify-content: center;
+        width: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+.boundary-input {
+    display: inline-block;
+}
+
+#render-speed,
+#target-iterations {
+    width: 100% !important;
+    min-width: 90px !important;
+}
+
+#move-left-25percent,
+#move-left-10percent,
+#move-right-10percent,
+#move-right-25percent,
+#move-down-25percent,
+#move-down-10percent,
+#move-up-10percent,
+#move-up-25percent,
+#zoom-out-5x,
+#zoom-out-2x,
+#zoom-in-2x,
+#zoom-in-5x {
+    width: 40px;
+}
+
+button[id="full-screen-on-desktop"],
+button[id="full-screen-off-desktop"],
+button[id="auto-calculate-iteration-depth-on-desktop"],
+button[id="auto-calculate-iteration-depth-off-desktop"] {
+    width: 280px !important;
+}
+
+/* input field aggreagte */
+.form-control,
+button[id="show-settings-mobile"],
+button[id="hide-settings-mobile"],
+button[id="show-settings-desktop"],
+button[id="hide-settings-desktop"],
+button[id="render-mandelbrot"],
+button[id="full-screen-on-mobile"],
+button[id="full-screen-off-mobile"],
+button[id="auto-calculate-iteration-depth-on-mobile"],
+button[id="auto-calculate-iteration-depth-off-mobile"] {
+    width: 100%;
+    min-width: 90px;
+}

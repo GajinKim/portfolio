@@ -19,6 +19,6 @@ Resources:
             Principal: '*'
 
 Outputs:
-  S3BucketName:
+  BucketName:
     Description: S3 Bucket Name
     Value: !Ref Bucket
