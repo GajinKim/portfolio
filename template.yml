@@ -30,11 +30,11 @@ Resources:
       HostedZoneName: gajinkim.com.
       RecordSets:
         - Name: gajinkim.com
-          ResourceRecords: s3-website-us-east-1.amazonaws.com.
+          ResourceRecords: !Ref Bucket
           TTL: 900
           Type: A
         - Name: www.gajinkim.com
-          ResourceRecords: s3-website-us-east-1.amazonaws.com.
+          ResourceRecords: !Ref Bucket
           TTL: 900
           Type: A
 
