@@ -5,6 +5,7 @@ Resources:
   Bucket:
     Type: AWS::S3::Bucket
     Properties:
+      BucketName: gajinkim.com
       Tags:
         - Key: Name
           Value: gajinkim.com
