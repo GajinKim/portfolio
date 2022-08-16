@@ -30,7 +30,7 @@ Resources:
       HostedZoneName: gajinkim.com.
       AliasTarget:
         DNSName: s3-website.us-east-1.amazonaws.com
-        HostedZoneId: ${{ secrets.GAJINKIM_DOT_COM_HZ_ID }}
+        HostedZoneId: Z00684801I7GELBGWLUZY
       Type: A
 
 Outputs:
