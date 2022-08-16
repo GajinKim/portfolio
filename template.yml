@@ -11,6 +11,6 @@ Resources:
       Bucket: !Ref Bucket
 
 Outputs:
-  Bucketname:
+  S3BucketName:
     Description: S3 Bucket Name
     Value: !Ref Bucket
