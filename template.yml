@@ -21,7 +21,22 @@ Resources:
             Effect: Allow
             Resource:
               - !Sub "arn:aws:s3:::${Bucket}/*"
-            Principal: '*'
+            Principal: "*"
+
+  RecordSetGroup:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      Comment: Route 53 records for gajinkim.com portfolio
+      HostedZoneName: gajinkim.com.
+      RecordSets:
+        - Name: gajinkim.com
+          ResourceRecords: s3-website-us-east-1.amazonaws.com.
+          TTL: 900
+          Type: A
+        - Name: www.gajinkim.com
+          ResourceRecords: s3-website-us-east-1.amazonaws.com.
+          TTL: 900
+          Type: A
 
 Outputs:
   BucketName:
