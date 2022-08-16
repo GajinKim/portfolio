@@ -23,20 +23,10 @@ Resources:
               - !Sub "arn:aws:s3:::${Bucket}/*"
             Principal: "*"
 
-  RecordSetGroup:
-    Type: AWS::Route53::RecordSetGroup
-    Properties:
-      Comment: Route 53 records for gajinkim.com portfolio
-      HostedZoneName: gajinkim.com.
-      RecordSets:
-        - Name: gajinkim.com
-          ResourceRecords: !Ref Bucket
-          TTL: 900
-          Type: A
-        - Name: www.gajinkim.com
-          ResourceRecords: !Ref Bucket
-          TTL: 900
-          Type: A
+  RecordSet:
+    Type: AWS::Route53::RecordSet
+      DNSName: !Ref Bucket
+      HostedZoneId: Z00684801I7GELBGWLUZY
 
 Outputs:
   BucketName:
