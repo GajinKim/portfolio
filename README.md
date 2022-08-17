@@ -11,10 +11,11 @@ Reference [Github Docs](https://docs.github.com/en/actions/deployment/security-h
 
 [RecordSet AliasTarget docs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html) for various AWS resources - Configure HostedZoneId and DNSName for static S3 websites according to [this](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints) static list of endpoints.
 
----
+#
 
 ### Configuration for cicd (Github Actions) workflow
 `.github/workflows/ci-prod.yml` - Only triggers on pushes to `master` branch.
+- See [here](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-deploy.html) for `sam cli` documentation.
 
 ### CloudFormation Template
 `template.yml` - Resource list: `S3:Bucket`, `S3:BucketPolicy`, `Route53:RecordSetGroups`.
