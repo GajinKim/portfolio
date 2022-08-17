@@ -25,6 +25,7 @@ Resources:
             Resource:
               - !Sub "arn:aws:s3:::${Bucket}/*"
             Principal: "*"
+            Sid: "PublicReadGetObject"
 
   RecordSet:
     Type: AWS::Route53::RecordSet
@@ -33,7 +34,7 @@ Resources:
       HostedZoneName: gajinkim.com.
       AliasTarget:
         DNSName: s3-website.us-east-1.amazonaws.com
-        HostedZoneId: Z00684801I7GELBGWLUZY
+        HostedZoneId: Z3AQBSTGFYJSTF
       Type: A
 
 Outputs:
