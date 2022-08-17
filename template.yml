@@ -38,15 +38,15 @@ Resources:
   #     Type: A
 
   RecordSetGroup:
-  Type: AWS::Route53::RecordSetGroup
-  Properties:
-    HostedZoneId: Z00684801I7GELBGWLUZY
-    RecordSets:
-      - Name: gajinkim.com.
-        Type: A
-        AliasTarget:
-          HostedZoneId: Z3AQBSTGFYJSTF
-          DNSName: s3-website.us-east-1.amazonaws.com
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneId: Z00684801I7GELBGWLUZY
+      RecordSets:
+        - Name: gajinkim.com.
+          Type: A
+          AliasTarget:
+            HostedZoneId: Z3AQBSTGFYJSTF
+            DNSName: s3-website.us-east-1.amazonaws.com
 
 Outputs:
   BucketName:
