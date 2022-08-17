@@ -2,15 +2,15 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description: Create an S3 Bucket for Portfolio
 
 Parameters:
-  BucketName:
+  RootDomainName:
     Type: String
-    Default: "gajinkim.com"
+    Description: gajinkim.com
 
 Resources:
   Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Ref BucketName
+      BucketName: !Ref RootDomainName
       WebsiteConfiguration:
         IndexDocument: "index.html"
         # ErrorDocument: 'index.html'
@@ -45,9 +45,11 @@ Resources:
   RecordSetGroup:
     Type: AWS::Route53::RecordSetGroup
     Properties:
-      HostedZoneName: gajin-kim.com.
+      HostedZoneName: !Sub
+        - ${Domain}.
+        - Domain: !Ref RootDomainName
       RecordSets:
-        - Name: gajinkim.com.
+        - Name: !Ref RootDomainName
           Type: A
           AliasTarget:
             HostedZoneId: Z3AQBSTGFYJSTF
@@ -56,4 +58,4 @@ Resources:
 Outputs:
   BucketName:
     Description: S3 Bucket Name
-    Value: !Ref BucketName
+    Value: !Ref RootDomainName
