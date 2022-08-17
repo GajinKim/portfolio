@@ -45,7 +45,7 @@ Resources:
   RecordSetGroup:
     Type: AWS::Route53::RecordSetGroup
     Properties:
-      HostedZoneId: gajin-kim.com.
+      HostedZoneName: gajin-kim.com.
       RecordSets:
         - Name: gajinkim.com.
           Type: A
