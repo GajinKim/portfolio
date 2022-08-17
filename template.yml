@@ -31,7 +31,7 @@ Resources:
     Type: AWS::Route53::RecordSet
     Properties:
       Name: gajinkim.com
-      HostedZoneId: Z3AQBSTGFYJSTF
+      HostedZoneId: Z00684801I7GELBGWLUZY
       AliasTarget:
         DNSName: s3-website.us-east-1.amazonaws.com
         HostedZoneId: Z3AQBSTGFYJSTF
