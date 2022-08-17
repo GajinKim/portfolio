@@ -4,7 +4,7 @@ Description: Create an S3 Bucket for Portfolio
 Parameters:
   RootDomainName:
     Type: String
-    Description: gajinkim.com
+    Default: gajinkim.com
 
 Resources:
   Bucket:
