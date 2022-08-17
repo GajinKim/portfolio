@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: prod
     env:
-      STACK_NAME: portfolio-cloudformation-stack
+      STACK_NAME: PortfolioCloudFormation
     steps:
       - name: Checkout Github Repo
         uses: actions/checkout@master
@@ -28,7 +28,7 @@ jobs:
           role-to-assume: ${{ secrets.ARN_AWS_IAM_ROLE }}
           aws-region: ${{ env.REGION }}
 
-      - name: Deploy ${{ env.STACK_NAME }}
+      - name: Deploy ${{ env.STACK_NAME }} Stack
         run: |
           sam deploy --stack-name $STACK_NAME --region $REGION
 
