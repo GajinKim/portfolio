@@ -10,6 +10,44 @@ Parameters:
     Default: dev.gajinkim.com
 
 Resources:
+  DevBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref DevRootDomainName
+      WebsiteConfiguration:
+        IndexDocument: "index.html"
+        # ErrorDocument: 'index.html'
+      Tags:
+        - Key: Name
+          Value: dev.gajinkim.com
+   
+  DevBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref DevBucket
+      PolicyDocument:
+        Statement:
+          - Action:
+              - "s3:GetObject"
+            Effect: Allow
+            Resource:
+              - !Sub "arn:aws:s3:::${DevBucket}/*"
+            Principal: "*"
+            Sid: "PublicReadGetObject" 
+
+  DevRecordSetGroup:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneName: !Sub
+        - ${Domain}.
+        - Domain: !Ref DevRootDomainName
+      RecordSets:
+        - Name: !Ref DevRootDomainName
+          Type: A
+          AliasTarget:
+            HostedZoneId: Z3AQBSTGFYJSTF
+            DNSName: s3-website-us-east-1.amazonaws.com
+
   Bucket:
     Type: AWS::S3::Bucket
     Properties:
@@ -35,32 +73,6 @@ Resources:
             Principal: "*"
             Sid: "PublicReadGetObject"
 
-  DevBucket:
-    Type: AWS::S3::Bucket
-    Properties:
-      BucketName: !Ref DevRootDomainName
-      WebsiteConfiguration:
-        IndexDocument: "index.html"
-        # ErrorDocument: 'index.html'
-      Tags:
-        - Key: Name
-          Value: dev.gajinkim.com
-
-   
-  DevBucketPolicy:
-    Type: AWS::S3::BucketPolicy
-    Properties:
-      Bucket: !Ref DevBucket
-      PolicyDocument:
-        Statement:
-          - Action:
-              - "s3:GetObject"
-            Effect: Allow
-            Resource:
-              - !Sub "arn:aws:s3:::${DevBucket}/*"
-            Principal: "*"
-            Sid: "PublicReadGetObject" 
-
   RecordSetGroup:
     Type: AWS::Route53::RecordSetGroup
     Properties:
@@ -75,10 +87,10 @@ Resources:
             DNSName: s3-website-us-east-1.amazonaws.com
 
 Outputs:
-  BucketName:
-    Description: S3 Bucket Name
-    Value: !Ref RootDomainName
   DevBucketName:
     Description: Dev S3 Bucket Name
     Value: !Ref DevRootDomainName
+  BucketName:
+    Description: S3 Bucket Name
+    Value: !Ref RootDomainName
 
