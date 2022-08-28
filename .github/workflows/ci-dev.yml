@@ -1,0 +1,38 @@
+name: ci-dev
+
+on:
+  push:
+    branches: ["master"]
+
+permissions:
+  id-token: write
+  contents: read
+  deployments: write
+
+env:
+  REGION: us-east-1
+
+jobs:
+  deploy-dev:
+    runs-on: ubuntu-latest
+    environment: dev
+    env:
+      STACK_NAME: Portfolio
+    steps:
+      - name: Checkout Github Repo
+        uses: actions/checkout@master
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.ARN_AWS_IAM_ROLE }}
+          aws-region: ${{ env.REGION }}
+
+      - name: Deploy ${{ env.STACK_NAME }} CloudFormation Stack
+        run: |
+          sam deploy --stack-name $STACK_NAME --region $REGION --no-fail-on-empty-changeset
+
+      - name: Add Files to S3 Bucket
+        run: |
+          BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name $STACK_NAME --query 'Stacks[0].Outputs[?OutputKey==`BucketName`].OutputValue' --output text)
+          aws s3 cp src s3://$BUCKET_NAME --recursive
