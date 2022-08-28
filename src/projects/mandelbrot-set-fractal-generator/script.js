@@ -51,10 +51,10 @@ document.getElementById("render-mandelbrot").onclick = async function () {
 };
 
 // ARROW & ZOOM BUTTON FUNCTIONALITY
-document.getElementById("move-left-10percent").onclick = async function () {
+document.getElementById("move-left-8point4percent").onclick = async function () {
     await updateZoom();
     await updatePrecision();
-    document.getElementById("origin-x-coord").value = (Number(document.getElementById("origin-x-coord").value) - 0.10 * (defaultWidth) * (1 / zoom)).toFixed(precision);
+    document.getElementById("origin-x-coord").value = (Number(document.getElementById("origin-x-coord").value) - 0.084 * (defaultWidth) * (1 / zoom)).toFixed(precision);
 };
 
 document.getElementById("move-left-25percent").onclick = async function () {
@@ -63,10 +63,10 @@ document.getElementById("move-left-25percent").onclick = async function () {
     document.getElementById("origin-x-coord").value = (Number(document.getElementById("origin-x-coord").value) - 0.25 * (defaultWidth) * (1 / zoom)).toFixed(precision);
 };
 
-document.getElementById("move-right-10percent").onclick = async function () {
+document.getElementById("move-right-8point4percent").onclick = async function () {
     await updateZoom();
     await updatePrecision();
-    document.getElementById("origin-x-coord").value = (Number(document.getElementById("origin-x-coord").value) + 0.10 * (defaultWidth) * (1 / zoom)).toFixed(precision);
+    document.getElementById("origin-x-coord").value = (Number(document.getElementById("origin-x-coord").value) + 0.084 * (defaultWidth) * (1 / zoom)).toFixed(precision);
 };
 
 document.getElementById("move-right-25percent").onclick = async function () {
@@ -316,7 +316,7 @@ function updateZoom() {
 
 function updatePrecision() {
     if (zoom < 2) {
-        precision = 1;
+        precision = 2;
     } else if (zoom > 16) {
         precision = 8;
     } else {
