@@ -5,6 +5,9 @@ Parameters:
   RootDomainName:
     Type: String
     Default: gajinkim.com
+  DevRootDomainName:
+    Type: String
+    Default: dev.gajinkim.com
 
 Resources:
   Bucket:
@@ -32,6 +35,32 @@ Resources:
             Principal: "*"
             Sid: "PublicReadGetObject"
 
+  DevBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref DevRootDomainName
+      WebsiteConfiguration:
+        IndexDocument: "index.html"
+        # ErrorDocument: 'index.html'
+      Tags:
+        - Key: Name
+          Value: dev.gajinkim.com
+
+   
+  DevBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref DevBucket
+      PolicyDocument:
+        Statement:
+          - Action:
+              - "s3:GetObject"
+            Effect: Allow
+            Resource:
+              - !Sub "arn:aws:s3:::${DevBucket}/*"
+            Principal: "*"
+            Sid: "PublicReadGetObject" 
+
   RecordSetGroup:
     Type: AWS::Route53::RecordSetGroup
     Properties:
@@ -49,3 +78,7 @@ Outputs:
   BucketName:
     Description: S3 Bucket Name
     Value: !Ref RootDomainName
+  DevBucketName:
+    Description: Dev S3 Bucket Name
+    Value: !Ref DevRootDomainName
+
