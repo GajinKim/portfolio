@@ -1,0 +1,24 @@
+.rotating.box {
+  transition: transform 1200ms;
+  transition-timing-function: ease-out;
+  will-change: transform;
+  background: rgb(230, 190, 138, 0.9); /* pale gold */
+  display: inline-flex;
+}
+.rotating.box:hover,
+.rotating.box:focus {
+  transform: rotate(1080deg);
+  background-color: palegoldenrod;
+
+  /* will make it so rotating animation doesn't occur until cursor is off */
+  transition: background-color 1s ease-out;
+  cursor: grab;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 18px;
+  border-radius: 15%;
+  z-index: -1;
+}
