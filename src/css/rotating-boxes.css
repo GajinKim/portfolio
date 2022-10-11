@@ -1,16 +1,16 @@
 .rotating.box {
-  transition: transform 1200ms;
+  transition-property: transform, background-color;
+  transition-duration: 1500ms;
   transition-timing-function: ease-out;
-  will-change: transform;
-  background: rgba(47, 79, 79, 0.2);
+  will-change: all;
+  background: rgba(144, 148, 148, 0.2);
   display: inline-flex;
 }
 .rotating.box:hover,
 .rotating.box:focus {
-  transform: rotate(1080deg);
-  background-color: slategray;
-  /* will make it so rotating animation doesn't occur until cursor is off */
-  transition: background-color 1s ease-out;
+  transform: rotate(2160deg);
+  background-color: goldenrod;
+  transition-duration: 0ms;
   cursor: grab;
 }
 
@@ -20,4 +20,8 @@
   margin: 16px;
   border-radius: 15%;
   z-index: -1;
+}
+
+#repeating {
+  text-align: center; /* keeps blocks centered */
 }
