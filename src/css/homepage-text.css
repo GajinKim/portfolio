@@ -1,0 +1,69 @@
+#home {
+  background: radial-gradient(rgb(0, 10, 20), black);
+  overflow-y: hidden;
+}
+
+.homepage-text {
+  overflow: hidden;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .homepage-text-mobile {
+    /* positioning */
+    position: absolute;
+    top: 40vh;
+    left: 20px;
+  }
+  .homepage-title-mobile {
+    /* font */
+    font-family: Ubuntu;
+    font-size: 40px;
+    /* line-height: max(4vw, 40px); */
+    color: orange;
+  }
+  .homepage-content-mobile {
+    /* font */
+    font-family: Ubuntu;
+    font-size: 30px;
+    color: rgb(150, 100, 30);
+    line-height: 30px;
+    margin-top: 30px;
+  }
+  .homepage-typewriter {
+    color: orange;
+    background-color: rgba(184, 134, 11, 0.25);
+    text-decoration: none;
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .homepage-text {
+    /* positioning */
+    position: absolute;
+    top: 30vh;
+    left: 20vw; /* final positioning on desktop will always be 20vw from edge of screen */
+  }
+  .homepage-title {
+    /* font */
+    font-family: Ubuntu;
+    font-size: 80px;
+    line-height: 80px;
+    color: orange;
+  }
+  .homepage-content {
+    /* font */
+    font-family: Ubuntu;
+    font-size: 60px;
+    color: rgb(150, 100, 30);
+    line-height: 60px;
+    margin-top: 40px;
+  }
+  .homepage-typewriter {
+    color: orange;
+    background-color: rgba(184, 134, 11, 0.25);
+    text-decoration: none;
+    margin-left: 10px;
+  }
+}

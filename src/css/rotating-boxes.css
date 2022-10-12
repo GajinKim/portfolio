@@ -1,8 +1,8 @@
 .rotating.box {
   transition-property: transform, background-color;
+  will-change: transform, background-color;
   transition-duration: 1500ms;
   transition-timing-function: ease-out;
-  will-change: all;
   background: rgba(144, 148, 148, 0.2);
   display: inline-flex;
 }

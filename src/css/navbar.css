@@ -1,5 +1,5 @@
 /* mobile navbar */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   /* remove the literal checkbox (bottom left) */
   #navbar-toggle-mobile {
     opacity: 0;
@@ -74,7 +74,7 @@
 }
 
 /* desktop navbar */
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .homepage-links {
     top: 0%;
     width: 100%;
@@ -84,14 +84,13 @@
   }
 }
 
-/* FONTS */
 .homepage-link {
   font-family: Ubuntu;
   font-size: max(1vw, 15px);
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
-  color: goldenrod;
+  color: orange;
   text-decoration: none;
 
   top: 2vh;
