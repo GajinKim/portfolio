@@ -1,69 +1,132 @@
 #home {
-  background: radial-gradient(rgb(0, 10, 20), black);
+  background: radial-gradient(rgba(30, 20, 0), rgb(20, 10, 0), black);
   overflow-y: hidden;
 }
 
-.homepage-text {
-  overflow: hidden;
-  z-index: 2;
-}
-
+/* Phones */
 @media (max-width: 768px) {
-  .homepage-text-mobile {
-    /* positioning */
-    position: absolute;
-    top: 40vh;
-    left: 20px;
-  }
-  .homepage-title-mobile {
-    /* font */
+  .homepage-wrapper {
     font-family: Ubuntu;
-    font-size: 40px;
-    /* line-height: max(4vw, 40px); */
-    color: orange;
-  }
-  .homepage-content-mobile {
-    /* font */
-    font-family: Ubuntu;
-    font-size: 30px;
-    color: rgb(150, 100, 30);
-    line-height: 30px;
-    margin-top: 30px;
-  }
-  .homepage-typewriter {
-    color: orange;
-    background-color: rgba(184, 134, 11, 0.25);
-    text-decoration: none;
-    margin-left: 4px;
-  }
-}
-
-@media (min-width: 768px) {
-  .homepage-text {
-    /* positioning */
     position: absolute;
     top: 30vh;
-    left: 20vw; /* final positioning on desktop will always be 20vw from edge of screen */
+    left: 5vw;
   }
   .homepage-title {
-    /* font */
+    font-size: 50px;
+    line-height: 50px;
+    color: orange;
+  }
+  .homepage-typewritter-wrapper {
+    font-size: 28px;
+    line-height: 28px;
+    color: rgb(150, 85, 0);
+    margin-top: 14px; /* font-size divided by 2 */
+    margin-bottom: 14px; /* font-size divided by 2 */
+  }
+  .homepage-typewriter {
+    color: rgb(150, 85, 0);
+    text-decoration: underline;
+    margin-left: 0.4vw;
+  }
+  .homepage-body {
+    font-size: 14px;
+    color: rgb(150, 85, 0);
+    margin-bottom: 14px;
+  }
+  .homepage-body-link {
+    font-size: 14px;
+    color: orange;
+    text-decoration: none;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .homepage-wrapper {
     font-family: Ubuntu;
+    position: absolute;
+    top: 30vh;
+    left: 10vw;
+  }
+  .homepage-title {
+    font-size: 50px;
+    line-height: 50px;
+    color: orange;
+  }
+  .homepage-typewritter-wrapper {
+    font-size: 50px;
+    line-height: 50px;
+    color: rgb(200, 115, 0);
+    margin-top: 25px; /* font-size divided by 2 */
+    margin-bottom: 25px; /* font-size divided by 2 */
+  }
+  .homepage-typewriter {
+    color: rgb(200, 115, 0);
+    text-decoration: underline;
+    margin-left: 0.4vw;
+  }
+  .homepage-body {
+    font-size: 20px;
+    color: rgb(200, 115, 0);
+    margin-bottom: 20px;
+  }
+  .homepage-body-link {
+    font-size: 20px;
+    color: orange;
+    text-decoration: none;
+  }
+}
+
+/* Small Laptop */
+@media (min-width: 992px) {
+  .homepage-wrapper {
+    font-family: Ubuntu;
+    position: absolute;
+    top: 30vh;
+    left: 10vw;
+  }
+  .homepage-title {
+    font-size: 70px;
+    line-height: 70px;
+    color: orange;
+  }
+  .homepage-typewritter-wrapper {
+    font-size: 70px;
+    line-height: 70px;
+    color: rgb(150, 85, 0);
+    margin-top: 35px; /* font-size divided by 2 */
+    margin-bottom: 35px; /* font-size divided by 2 */
+  }
+  .homepage-typewriter {
+    color: rgb(150, 85, 0);
+    text-decoration: underline;
+    margin-left: 0.4vw;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .homepage-wrapper {
+    font-family: Ubuntu;
+    position: absolute;
+    top: 30vh;
+    left: 15vw;
+  }
+  .homepage-title {
     font-size: 80px;
     line-height: 80px;
     color: orange;
   }
-  .homepage-content {
-    /* font */
-    font-family: Ubuntu;
-    font-size: 60px;
-    color: rgb(150, 100, 30);
-    line-height: 60px;
-    margin-top: 40px;
+  .homepage-typewritter-wrapper {
+    font-size: 80px;
+    line-height: 80px;
+    color: rgb(150, 85, 0);
+    margin-top: 40px; /* font-size divided by 2 */
+    margin-bottom: 40px; /* font-size divided by 2 */
   }
   .homepage-typewriter {
-    color: orange;
-    background-color: rgba(184, 134, 11, 0.25);
-    text-decoration: none;
-    margin-left: 8px;
+    color: rgb(150, 85, 0);
+    text-decoration: underline;
+    margin-left: 0.4vw;
   }
 }
