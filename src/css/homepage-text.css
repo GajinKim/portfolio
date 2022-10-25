@@ -3,7 +3,7 @@
   overflow-y: hidden;
 }
 
-/* Phones */
+/* Phone */
 @media (max-width: 768px) {
   .homepage-wrapper {
     font-family: Ubuntu;
