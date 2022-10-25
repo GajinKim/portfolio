@@ -16,7 +16,6 @@
     white-space: nowrap;
   }
   .homepage-link:hover {
-    color: gold;
     transition: color 250ms linear;
   }
   .homepage-link {
