@@ -4,8 +4,8 @@
 }
 .page {
   width: 100%;
-  z-index: -2;
   display: block;
+  z-index: -3;
 }
 
 #home {
@@ -13,11 +13,11 @@
 }
 
 #about {
-  height: 100vh;
-  background-color: rgb(68, 68, 42);
+  background-color: Linen;
+  overflow: hidden;
 }
 
 #projects {
   height: 100vh;
-  background-color: green;
+  background-color: rgba(20, 30, 40, 0.5);
 }

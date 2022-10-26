@@ -22,24 +22,24 @@ nav {
 
 @media (max-width: 768px) {
   #navbar {
-    height: max(9.6vh, 15px + 8vh);
+    height: max(7.6vh, 15px + 6vh);
     text-align: center;
   }
   #navbar a {
     font-size: max(1.6vh, 15px);
-    top: 3vh;
+    top: 2vh;
     padding: 1vh;
   }
 }
 
 @media (min-width: 768px) {
   #navbar {
-    height: max(9.8vh, 16px + 8vh);
+    height: max(7.8vh, 16px + 6vh);
     text-align: end;
   }
   #navbar a {
     font-size: max(1.8vh, 16px);
-    top: 2vh;
+    top: 1vh;
     right: 2vh;
     padding: 2vh;
   }
@@ -47,12 +47,12 @@ nav {
 
 @media (min-width: 992px) {
   #navbar {
-    height: max(10vh, 20px + 8vh);
+    height: max(8vh, 20px + 6vh);
     text-align: end;
   }
   #navbar a {
     font-size: max(2vh, 20px);
-    top: 2vh;
+    top: 1vh;
     right: 2vh;
     padding: 2vh;
   }

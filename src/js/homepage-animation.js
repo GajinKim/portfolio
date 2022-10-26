@@ -1,4 +1,4 @@
-var TxtType = (el, toRotate, period) => {
+var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -8,13 +8,15 @@ var TxtType = (el, toRotate, period) => {
   this.isDeleting = false;
 };
 
-TxtType.prototype.tick = () => {
+TxtType.prototype.tick = function () {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
-  this.isDeleting
-    ? (this.txt = fullTxt.substring(0, this.txt.length - 1))
-    : (this.txt = fullTxt.substring(0, this.txt.length + 1));
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
 
   this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
 
@@ -27,17 +29,19 @@ TxtType.prototype.tick = () => {
 
   if (!this.isDeleting && this.txt === fullTxt) {
     delta = this.period;
+    this.isDeleting = true;
   } else if (this.isDeleting && this.txt === "") {
+    this.isDeleting = false;
     this.loopNum++;
     delta = 500;
   }
 
-  setTimeout(() => {
+  setTimeout(function () {
     that.tick();
   }, delta);
 };
 
-window.onload = () => {
+window.onload = function () {
   let elements = document.getElementsByClassName("homepage-typewriter");
 
   for (let i = 0; i < elements.length; i++) {
@@ -52,3 +56,20 @@ window.onload = () => {
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid orange}";
   document.body.appendChild(css);
 };
+
+// // desktop
+// window.onload = function () {
+//     console.log('hi');
+//   let elements = document.getElementsByClassName("homepage-typewriter");
+//   for (let i = 0; i < elements.length; i++) {
+//     let toRotate = elements[i].getAttribute("data-type");
+//     let period = elements[i].getAttribute("data-period");
+//     if (toRotate) {
+//       new TxtType(elements[i], JSON.parse(toRotate), period);
+//     }
+//   }
+//   let css = document.createElement("style");
+//   css.type = "text/css";
+//   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid orange}";
+//   document.body.appendChild(css);
+// };

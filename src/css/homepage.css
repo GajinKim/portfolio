@@ -31,6 +31,7 @@
   .homepage-wrapper {
     top: 30vh;
     left: 5vw;
+    width: 90vw;
   }
   .homepage-title {
     font-size: 50px;
@@ -60,6 +61,7 @@
   .homepage-wrapper {
     top: 30vh;
     left: 10vw;
+    width: 80vw;
   }
   .homepage-title {
     font-size: 50px;
@@ -89,6 +91,7 @@
   .homepage-wrapper {
     top: 30vh;
     left: 10vw;
+    width: 80vw;
   }
   .homepage-title {
     font-size: 70px;
@@ -110,6 +113,7 @@
   .homepage-wrapper {
     top: 30vh;
     left: 15vw;
+    width: 70vw;
   }
   .homepage-title {
     font-size: 80px;

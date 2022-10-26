@@ -1,0 +1,106 @@
+.aboutpage-wrapper {
+  font-family: Ubuntu;
+  position: relative;
+  overflow-x: hidden;
+  top: 10vh;
+  padding-bottom: 10vh;
+}
+
+#headshot {
+  border-radius: 50%;
+  border: 10px solid darkgray;
+}
+
+/* Phone */
+@media (max-width: 768px) {
+  .aboutpage-wrapper {
+    display: block;
+  }
+  .aboutpage-body {
+    width: 90vw;
+    padding-left: 5vw;
+  }
+  .aboutpage-headshot {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    text-align: center;
+  }
+  #headshot {
+    width: 40vw;
+    text-align: center;
+  }
+  .aboutpage-body {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .aboutpage-body-link {
+    font-size: 14px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .aboutpage-wrapper {
+    display: block;
+  }
+  .aboutpage-body {
+    width: 80vw;
+    padding-left: 10vw;
+  }
+  .aboutpage-headshot {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    text-align: center;
+  }
+  #headshot {
+    width: 40vw;
+  }
+  .aboutpage-body {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: dimgray;
+  }
+  .aboutpage-body-link {
+    font-size: 20px;
+  }
+}
+
+/* Small Laptop */
+@media (min-width: 992px) {
+  .aboutpage-wrapper {
+    left: 10vw;
+    display: inline-flex;
+  }
+  .aboutpage-body {
+    width: 45vw;
+    padding-left: 0;
+  }
+  .aboutpage-headshot {
+    padding-top: 0;
+    padding-bottom: 10vh;
+    width: 35vw;
+  }
+  #headshot {
+    width: 20vw;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .aboutpage-wrapper {
+    left: 15vw;
+    display: inline-flex;
+  }
+  .aboutpage-body {
+    width: 40vw;
+    padding-left: 0;
+  }
+  .aboutpage-headshot {
+    padding-top: 0;
+    padding-bottom: 10vh;
+    width: 30vw;
+  }
+  #headshot {
+    width: 20vw;
+  }
+}

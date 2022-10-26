@@ -12,7 +12,8 @@
       defer
     />
 
-    <link rel="stylesheet" href="css/homepage-text.css" defer />
+    <link rel="stylesheet" href="css/homepage.css" defer />
+    <link rel="stylesheet" href="css/aboutpage.css" defer />
     <link rel="stylesheet" href="css/rotating-boxes.css" defer />
     <link rel="stylesheet" href="css/font.css" defer />
     <link rel="stylesheet" href="css/navbar.css" defer />
@@ -29,21 +30,22 @@
   </head>
 
   <body>
-    <!-- Interative tile background -->
+    <!-- Navbar -->
+    <nav id="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <!-- move this into a footer later along with linkedin -->
+      <a href="https://github.com/GajinKim">GitHub</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Landing Page -->
     <div class="page" id="home">
       <div id="repeating">
         <div class="rotating box"></div>
       </div>
-
-      <nav id="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <!-- move this into a footer later along with linkedin -->
-        <a href="https://github.com/GajinKim">GitHub</a>
-        <a href="#contact">Contact</a>
-      </nav>
 
       <!-- Homepage text -->
       <div class="homepage-wrapper">
@@ -73,7 +75,16 @@
       </div>
     </div>
 
-    <div class="page" id="about"></div>
+    <!-- About Page -->
+    <div class="page" id="about">
+      <div class="aboutpage-wrapper">
+        <div class="aboutpage-body">Pop off king</div>
+        <div class="aboutpage-headshot">
+          <img src="./resources/headshot.png" id="headshot" />
+        </div>
+      </div>
+    </div>
+    
     <div class="page" id="projects"><p>hi3</p></div>
   </body>
 </html>
