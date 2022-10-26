@@ -22,25 +22,27 @@
     <script src="js/homepage-animation.js" defer></script>
     <script src="js/smooth-scroll-animation.js" defer></script>
     <script src="js/rotating-boxes-animation.js" defer></script>
+    <script src="js/navbar-scroll.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>Gajin Kim Portfolio</title>
   </head>
 
   <body>
+    <!-- Interative tile background -->
     <div class="page" id="home">
       <div id="repeating">
         <div class="rotating box"></div>
       </div>
 
-      <nav class="homepage-links">
-        <a class="homepage-link" href="#home" id="link-to-home">Home</a>
-        <a class="homepage-link" href="#about">About</a>
-        <a class="homepage-link" href="#projects">Projects</a>
-        <a class="homepage-link" href="#skills">Skills</a>
+      <nav id="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <!-- move this into a footer later along with linkedin -->
-        <a class="homepage-link" href="https://github.com/GajinKim">GitHub</a>
-        <a class="homepage-link" href="#contact">Contact</a>
+        <a href="https://github.com/GajinKim">GitHub</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <!-- Homepage text -->
@@ -57,9 +59,17 @@
             <span class="wrap"></span>
           </a>
         </p>
-        <br/>
-        <p class="homepage-body">I'm a 22 year old Software Consultant who has been working with <a class="homepage-body-link" href="https://www.sourceallies.com/">Source Allies</a> since 2021.</p>
-        <p class="homepage-body">Currently I'm studying for my 2nd AWS Certificate.</p> 
+        <br />
+        <p class="homepage-body">
+          I'm a 22 year old Software Consultant who has been working with
+          <a class="homepage-body-link" href="https://www.sourceallies.com/"
+            >Source Allies</a
+          >
+          since 2021.
+        </p>
+        <p class="homepage-body">
+          Currently I'm studying for my 2nd AWS Certificate.
+        </p>
       </div>
     </div>
 

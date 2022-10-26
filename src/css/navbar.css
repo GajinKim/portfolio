@@ -1,106 +1,59 @@
+nav {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  white-space: nowrap;
+  transition: top 0.3s;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+}
+#navbar a {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-variant: normal;
+  color: orange;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+#navbar a:hover {
+  transition: color 250ms linear;
+}
+
 @media (max-width: 768px) {
-  #link-to-home {
-    display: none;
-  }
-
-  nav {
-    background-color: rgba(0, 0, 0, 0.7);
+  #navbar {
     height: max(9.6vh, 15px + 8vh);
-    z-index: 2;
-  }
-  .homepage-links {
-    top: 0%;
-    width: 100%;
     text-align: center;
-    position: absolute;
-    white-space: nowrap;
   }
-  .homepage-link:hover {
-    transition: color 250ms linear;
-  }
-  .homepage-link {
-    font-family: Ubuntu;
+  #navbar a {
     font-size: max(1.6vh, 15px);
-    font-style: normal;
-    font-variant: normal;
-    color: orange;
-    text-decoration: none;
-
     top: 3vh;
     padding: 1vh;
-
-    position: relative;
-    display: inline-block;
   }
 }
 
 @media (min-width: 768px) {
-  nav {
-    background-color: rgba(0, 0, 0, 0.7);
+  #navbar {
     height: max(9.8vh, 16px + 8vh);
-    z-index: 2;
-  }
-  .homepage-links {
-    top: 0%;
-    width: 100%;
     text-align: end;
-    position: absolute;
-    white-space: nowrap;
   }
-  .homepage-link:hover {
-    color: gold;
-    transition: color 250ms linear;
-  }
-  .homepage-link {
-    font-family: Ubuntu;
+  #navbar a {
     font-size: max(1.8vh, 16px);
-    font-style: normal;
-    font-variant: normal;
-    color: orange;
-    text-decoration: none;
-
     top: 2vh;
     right: 2vh;
     padding: 2vh;
-
-    position: relative;
-    display: inline-block;
   }
 }
 
 @media (min-width: 992px) {
-  nav {
-    background-color: rgba(0, 0, 0, 0.7);
+  #navbar {
     height: max(10vh, 20px + 8vh);
-    z-index: 2;
-  }
-  .homepage-links {
-    top: 0%;
-    width: 100%;
     text-align: end;
-    position: absolute;
-    white-space: nowrap;
   }
-  .homepage-link:hover {
-    color: gold;
-    transition: color 250ms linear;
-  }
-  .homepage-link {
-    font-family: Ubuntu;
+  #navbar a {
     font-size: max(2vh, 20px);
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 500;
-    color: orange;
-    text-decoration: none;
-
-    /* top 2vh + padding 2vh = 4vh off top */
-    /* right 2vh + padding 2vh = 4vh from right */
     top: 2vh;
     right: 2vh;
     padding: 2vh;
-
-    position: relative;
-    display: inline-block;
   }
 }
