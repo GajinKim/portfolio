@@ -1,6 +1,6 @@
 generateRotationBoxes();
 
-$(window).resize(function () {
+$(window).resize(() => {
   generateRotationBoxes();
 });
 
@@ -17,4 +17,3 @@ function generateRotationBoxes() {
     repeatBoxes();
   }
 }
-

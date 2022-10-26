@@ -1,8 +1,8 @@
 $(document).ready(function () {
-  $("a").on("click", function (event) {
+  $("a").on("click", (event) => {
     if (this.hash !== "") {
       event.preventDefault();
-      var hash = this.hash;
+      let hash = this.hash;
       $("html, body").animate(
         {
           scrollTop: $(hash).offset().top,
