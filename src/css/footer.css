@@ -1,0 +1,69 @@
+#footer {
+  text-align: justify;
+  line-height: 0;
+  margin: 0;
+  background-color: rgb(15, 15, 15);
+}
+
+#footer:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+#footer a {
+  display: inline-block;
+  line-height: 100%;
+}
+
+.fa {
+  padding: max(1vh, 15px);
+  font-size: max(1.5vw, 22px);
+  width: max(1.5vw, 22px);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa.fa-linkedin-square {
+  color: rgb(0, 119, 181);
+  background-color: whitesmoke;
+}
+
+.fa.fa-github-square {
+  color: rgb(23, 21, 21);
+  background-color: whitesmoke;
+}
+
+.fa.fa-twitch {
+  color: rgb(145 70 255);
+  background-color: whitesmoke;
+}
+
+/* Phone */
+@media (max-width: 768px) {
+  #footer {
+    padding: 2vh 5vw;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  #footer {
+    padding: 2vh 10vw;
+  }
+}
+
+/* Small Laptop */
+@media (min-width: 992px) {
+  #footer {
+    padding: 2vh 10vw;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  #footer {
+    padding: 2vh 15vw;
+  }
+}
