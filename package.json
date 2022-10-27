@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Configure new IAM Role.\r - `IAM > Roles > {Role} > Trust Relationships`",
   "main": "index.js",
   "scripts": {
