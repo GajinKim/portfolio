@@ -5,6 +5,9 @@
 .homepage-wrapper {
   font-family: Ubuntu;
   position: absolute;
+    
+  /* makes content (boxes) beneath interactible */
+  pointer-events: none;
 }
 .homepage-title {
   color: orange;
