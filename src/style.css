@@ -13,8 +13,13 @@
 }
 
 #about {
-  background-color: Linen;
-  overflow: hidden;
+  background-image: url("./resources/background3.jpg");
+
+  /* Parallax */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #projects {
