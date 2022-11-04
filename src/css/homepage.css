@@ -2,29 +2,36 @@
   background: radial-gradient(rgba(30, 20, 0), rgb(20, 10, 0), black);
   overflow-y: hidden;
 }
+
 .homepage-wrapper {
   font-family: Ubuntu;
   position: absolute;
-    
+
   /* makes content (boxes) beneath interactible */
   pointer-events: none;
 }
+
 .homepage-title {
   color: orange;
 }
+
 .homepage-typewritter-wrapper {
   color: rgb(150, 85, 0);
 }
+
 .homepage-typewritter {
   text-decoration: underline;
 }
+
 .homepage-body {
   color: rgb(150, 85, 0);
 }
+
 .homepage-body-link {
   color: orange;
   text-decoration: none;
 }
+
 .homepage-body-link:hover {
   text-decoration: underline;
 }
@@ -36,24 +43,31 @@
     left: 5vw;
     width: 90vw;
   }
+
   .homepage-title {
     font-size: 50px;
     line-height: 50px;
   }
+
   .homepage-typewritter-wrapper {
     font-size: 28px;
     line-height: 28px;
-    margin-top: 14px; /* font-size divided by 2 */
-    margin-bottom: 14px; /* font-size divided by 2 */
+    margin-top: 14px;
+    /* font-size divided by 2 */
+    margin-bottom: 14px;
+    /* font-size divided by 2 */
   }
+
   .homepage-typewriter {
     color: rgb(150, 85, 0);
     margin-left: 0.4vw;
   }
+
   .homepage-body {
     font-size: 14px;
     margin-bottom: 14px;
   }
+
   .homepage-body-link {
     font-size: 14px;
   }
@@ -66,24 +80,31 @@
     left: 10vw;
     width: 80vw;
   }
+
   .homepage-title {
     font-size: 50px;
     line-height: 50px;
   }
+
   .homepage-typewritter-wrapper {
     font-size: 50px;
     line-height: 50px;
-    margin-top: 25px; /* font-size divided by 2 */
-    margin-bottom: 25px; /* font-size divided by 2 */
+    margin-top: 25px;
+    /* font-size divided by 2 */
+    margin-bottom: 25px;
+    /* font-size divided by 2 */
   }
+
   .homepage-typewriter {
     color: rgb(150, 85, 0);
     margin-left: 0.4vw;
   }
+
   .homepage-body {
     font-size: 20px;
     margin-bottom: 20px;
   }
+
   .homepage-body-link {
     font-size: 20px;
   }
@@ -96,16 +117,21 @@
     left: 10vw;
     width: 80vw;
   }
+
   .homepage-title {
     font-size: 70px;
     line-height: 70px;
   }
+
   .homepage-typewritter-wrapper {
     font-size: 70px;
     line-height: 70px;
-    margin-top: 35px; /* font-size divided by 2 */
-    margin-bottom: 35px; /* font-size divided by 2 */
+    margin-top: 35px;
+    /* font-size divided by 2 */
+    margin-bottom: 35px;
+    /* font-size divided by 2 */
   }
+
   .homepage-typewriter {
     margin-left: 0.4vw;
   }
@@ -118,16 +144,21 @@
     left: 15vw;
     width: 70vw;
   }
+
   .homepage-title {
     font-size: 80px;
     line-height: 80px;
   }
+
   .homepage-typewritter-wrapper {
     font-size: 80px;
     line-height: 80px;
-    margin-top: 40px; /* font-size divided by 2 */
-    margin-bottom: 40px; /* font-size divided by 2 */
+    margin-top: 40px;
+    /* font-size divided by 2 */
+    margin-bottom: 40px;
+    /* font-size divided by 2 */
   }
+
   .homepage-typewriter {
     margin-left: 0.4vw;
   }

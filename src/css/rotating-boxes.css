@@ -6,6 +6,7 @@
   background: rgba(144, 148, 148, 0.2);
   display: inline-flex;
 }
+
 .rotating.box:hover,
 .rotating.box:focus {
   transform: rotate(2160deg);
@@ -23,5 +24,6 @@
 }
 
 #repeating {
-  text-align: center; /* keeps blocks centered */
+  text-align: center;
+  /* keeps blocks centered */
 }

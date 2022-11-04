@@ -7,6 +7,7 @@
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 2;
 }
+
 #navbar a {
   font-family: Ubuntu;
   font-style: normal;
@@ -16,6 +17,7 @@
   position: relative;
   display: inline-block;
 }
+
 #navbar a:hover {
   transition: color 250ms linear;
 }
@@ -25,6 +27,7 @@
     height: max(7.6vh, 15px + 6vh);
     text-align: center;
   }
+
   #navbar a {
     font-size: max(1.6vh, 15px);
     top: 2vh;
@@ -37,6 +40,7 @@
     height: max(7.8vh, 16px + 6vh);
     text-align: end;
   }
+
   #navbar a {
     font-size: max(1.8vh, 16px);
     top: 1vh;
@@ -50,6 +54,7 @@
     height: max(8vh, 20px + 6vh);
     text-align: end;
   }
+
   #navbar a {
     font-size: max(2vh, 20px);
     top: 1vh;
