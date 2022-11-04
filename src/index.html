@@ -1,116 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//fonts.googleapis.com/css?family=Ubuntu"
-      defer
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/homepage.css" defer />
-    <link rel="stylesheet" href="css/aboutpage.css" defer />
-    <link rel="stylesheet" href="css/rotating-boxes.css" defer />
-    <link rel="stylesheet" href="css/font.css" defer />
-    <link rel="stylesheet" href="css/navbar.css" defer />
-    <link rel="stylesheet" href="css/footer.css" defer />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" defer />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" href="style.css" defer />
+  <link rel="stylesheet" href="css/homepage.css" defer />
+  <link rel="stylesheet" href="css/aboutpage.css" defer />
+  <link rel="stylesheet" href="css/rotating-boxes.css" defer />
+  <link rel="stylesheet" href="css/font.css" defer />
+  <link rel="stylesheet" href="css/navbar.css" defer />
+  <link rel="stylesheet" href="css/footer.css" defer />
 
-    <script src="js/homepage-animation.js" defer></script>
-    <script src="js/smooth-scroll-animation.js" defer></script>
-    <script src="js/rotating-boxes-animation.js" defer></script>
-    <script src="js/navbar-scroll.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css" defer />
 
-    <title>Gajin Kim Portfolio</title>
-  </head>
+  <script src="js/homepage-animation.js" defer></script>
+  <script src="js/smooth-scroll-animation.js" defer></script>
+  <script src="js/rotating-boxes-animation.js" defer></script>
+  <script src="js/navbar-scroll.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <body>
-    <!-- Navbar -->
-    <nav id="navbar">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <title>Gajin Kim Portfolio</title>
+</head>
 
-    <!-- Landing Page -->
-    <div class="page" id="home">
-      <div id="repeating">
-        <div class="rotating box"></div>
-      </div>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-      <!-- Homepage text -->
-      <div class="homepage-wrapper">
-        <p class="homepage-title">Gajin Kim</p>
-        <p class="homepage-typewritter-wrapper">
-          I'm a
-          <a
-            href=""
-            class="homepage-typewriter"
-            data-period="2000"
-            data-type='[ "Full Stack Engineer.", "Future AWS Wizard.", "Web Developer.", "Vampire Survivors Extraordinaire."]'
-          >
-            <span class="wrap"></span>
-          </a>
-        </p>
+  <!-- Landing Page -->
+  <div class="page" id="home">
+    <div id="repeating">
+      <div class="rotating box"></div>
+    </div>
+
+    <!-- Homepage text -->
+    <div class="homepage-wrapper">
+      <p class="homepage-title">Gajin Kim</p>
+      <p class="homepage-typewritter-wrapper">
+        I'm a
+        <a href="" class="homepage-typewriter" data-period="2000"
+          data-type='[ "Full Stack Engineer.", "Future AWS Wizard.", "Web Developer."."]'>
+          <span class="wrap"></span>
+        </a>
+      </p>
+      <br />
+      <p class="homepage-body">
+        I'm a 22 year old Software Consultant who has been working with
+        <a class="homepage-body-link" href="https://www.sourceallies.com/">Source Allies</a>
+        since 2021.
+      </p>
+      <p class="homepage-body">
+        Currently I'm studying for my 2nd AWS Certificate.
+      </p>
+    </div>
+  </div>
+
+  <!-- About Page -->
+  <div class="page" id="about">
+    <div class="aboutpage-wrapper">
+      <div class="aboutpage-body">
+        Hey! My name is Gajin Kim, I'm 22 and I enjoy working on different
+        projects in my free time. My current goals are to complete this
+        portfolio and famliarize myself with AWS.
         <br />
-        <p class="homepage-body">
-          I'm a 22 year old Software Consultant who has been working with
-          <a class="homepage-body-link" href="https://www.sourceallies.com/"
-            >Source Allies</a
-          >
-          since 2021.
-        </p>
-        <p class="homepage-body">
-          Currently I'm studying for my 2nd AWS Certificate.
-        </p>
+        <br />
+        In Spring of 2022 I graduated with a degree in Computer Science from Iowa State University and have been working
+        fulltime Software Consultant at Source Allies ever since.
+        This past year has been filled with excitement and opportunity learning about different tech stacks, meeting new
+        people, and exploring my passions.
+        <br />
+        <br />
+        Besides working on side projects, I enjoy hanging out with friends, gaming, and playing ukulele.
+        Welcome to my portfolio!
+      </div>
+      <div class="aboutpage-headshot">
+        <img src="./resources/headshot.png" id="headshot" />
       </div>
     </div>
+  </div>
 
-    <!-- About Page -->
-    <div class="page" id="about">
-      <div class="aboutpage-wrapper">
-        <div class="aboutpage-body">
-          Hey! My name is Gajin Kim, I'm 22 and I enjoy working on different
-          projects in my free time. My current goals are to complete this
-          portfolio and work towards become more fluent with cloud technologies.
-          <br />
-          <br />
-          In Spring of 2022 I graduated with a degree in Computer Science from Iowa State University and have been working fulltime Software Consultant at Source Allies ever since. 
-          This past year has offered me so many new experiences and opportunities in meeting new people, exploring different tech stacks, and learning what it means to be a team member.
-          One of the highlights from this past year was being introduced to AWS Cloud. 
-          <br/>
-          (<i>btw, this website is hosted on an S3 Bucket</i> &#128526).
-          <br />
-          <br />
-          Besides working on side projects, I enjoy hanging out with friends, online gaming, and learning how to play the ukulele.
-        </div>
-        <div class="aboutpage-headshot">
-          <img src="./resources/headshot.png" id="headshot" />
-        </div>
-      </div>
-    </div>
+  <div class="page" id="projects">
+    <p>hi3</p>
+  </div>
 
-    <div class="page" id="projects"><p>hi3</p></div>
+  <nav id="footer">
+    <a href="https://www.linkedin.com/in/gajink/" class="fa fa-linkedin-square"></a>
+    <a href="https://github.com/gajinkim" class="fa fa-github-square"></a>
+    <a href="https://www.twitch.tv/wondersc2" class="fa fa-twitch"></a>
+  </nav>
+</body>
 
-    <nav id="footer">
-      <a
-        href="https://www.linkedin.com/in/gajink/"
-        class="fa fa-linkedin-square"
-      ></a>
-      <a href="https://github.com/gajinkim" class="fa fa-github-square"></a>
-      <a href="https://www.twitch.tv/wondersc2" class="fa fa-twitch"></a>
-    </nav>
-  </body>
 </html>

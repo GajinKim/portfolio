@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 .page {
   width: 100%;
   display: block;
@@ -14,6 +15,10 @@
 
 #about {
   background-image: url("./resources/background3.jpg");
+
+  /* Tint */
+  background-color: rgba(200, 100, 0, .5);
+  background-blend-mode: multiply;
 
   /* Parallax */
   background-attachment: fixed;
